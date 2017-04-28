@@ -1239,7 +1239,7 @@ let ircServer = net.createServer(netOptions, function(socket) {
                             // Now we are connected let's change the nickname first to whatever it is on discord.
 
 
-                            if (!socked.discordid) {
+                            if (!socket.discordid) {
                                 socket.write(`:${configuration.ircServer.hostname} 464 ${nickname} :please set the Discord Server ID as IRC password\r\n`);
                                 console.log('ERROR: missing Discord Server ID');
                                 socket.end();
